@@ -1,0 +1,25 @@
+{
+  "all_sensitive_attributes": ["l_shipmode", "o_orderstatus", "l_linenumber"],
+  "number_fairness_constraints": 2,
+  "fairness_constraints": [
+    {
+        "sensitive_attributes":
+        {
+            "l_linenumber": 6,
+            "l_shipmode": "SHIP"
+        },
+        "symbol": ">=",
+        "number": 3321
+    },
+    {
+      "sensitive_attributes":
+      {
+        "l_shipmode": "TRUCK",
+        "o_orderstatus": "P"
+      },
+      "symbol": "<=",
+      "number": 7434
+    }
+  ]
+}
+
