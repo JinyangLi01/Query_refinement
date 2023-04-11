@@ -5,13 +5,20 @@ Diversity, group representation, and similar needs often apply to query results,
 
 
 ## Algorithms
-baseline algorithm: traverse all possible refinements. located in Algorithm/Baseline.py
+We have two algorithms: baseline and our algorithm.
+Both algorithms use provenance annotation to eliminate the need to access the database and re-execute the queries.
+They only have different searching strategies.
 
-our algorithm: use provenance expressions and PVL to accelerate the searching. 
-located in Algorithm/ProvenanceSearchValues.py
+
+Baseline algorithm: traverse all possible refinements. Script can be found in Algorithm/LatticeTraversal_4_20220901.py
+
+Our proposed algorithm: use provenance expressions and PVL to accelerate the searching. 
+Script can be found in Algorithm/ProvenanceSearchValues_8_20230119.py
 
 
 ## How to run experiments
 run any .py file under folder Experiment
 
 
+## Where to find the paper
+Our technical report can be found at FullPaper/Query_Refinement.pdf
