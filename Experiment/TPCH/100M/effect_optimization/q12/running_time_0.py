@@ -98,5 +98,5 @@ def run(q, c):
     compare(q, c, time_output)
     time_output.close()
 
-run(12, "relax1")
+# run(12, "relax1")
 run(12, "contract1")

@@ -86,7 +86,7 @@ def run(query, size, constraint):
 
     plt.xlabel(r'o\underline{ }orderdate starting from \\01/15/2995, 15d interval',
                fontsize=80, weight='bold').set_position((0.45, -0.1))
-    # plt.ylabel('Running time (s)')
+
     plt.legend(loc='upper left', bbox_to_anchor=(0, 1), fontsize=55, handlelength = 1.5)
 
     plt.tight_layout()

@@ -22,7 +22,7 @@ label = ['PS-prov', "PS-search", "BL-prov", "BL-search"]
 plt.rc('text', usetex=True)
 plt.rc('font', size=70, weight='bold')
 
-f_size = (14, 10)
+f_size = (13, 8.5)
 
 x_list = list()
 x_naive = list()
@@ -64,7 +64,7 @@ def run(query, size, constraint):
     print(x_list, execution_timeps1, execution_timeps2)
 
     index = np.arange(len(execution_timeps1))
-    bar_width = 0.45
+    bar_width = 0.5
 
     fig, ax = plt.subplots(1, 1, figsize=f_size)
 
@@ -86,7 +86,10 @@ def run(query, size, constraint):
 
     plt.xlabel(r'o\underline{ }orderdate, 1m apart', fontsize=80, weight='bold')
     # plt.ylabel('Running time (s)')
-    plt.legend(loc='upper left', bbox_to_anchor=(0, 1.05), fontsize=65)
+    plt.legend(loc='upper left', bbox_to_anchor=(0, 1.05), fontsize=60,
+               ncol=1, labelspacing=0.2, handletextpad=0.2, markerscale=0.3,
+               columnspacing=0.2, borderpad=0.2, handlelength=1.5, frameon=True)
+
     # plt.legend(loc='best', fontsize=50)
     plt.tight_layout()
     fig_path = "query_selectivity_q" + str(query) + "_" + size + "_" + constraint + ".png"

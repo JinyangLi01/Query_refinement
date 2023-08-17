@@ -23,7 +23,7 @@ plt.rc('font', size=70, weight='bold')
 color = ['C1', 'C0', 'C3', 'C2']
 label = ['PS-prov', "PS-search", "BL-prov", "BL-search"]
 
-f_size = (14, 10)
+f_size = (13, 8)
 
 x_list = list()
 x_naive = list()
@@ -63,7 +63,7 @@ def run(query, size, constraint):
     print(x_list, execution_timeps1, execution_timeps2)
 
     index = np.arange(len(execution_timeps1))
-    bar_width = 0.45
+    bar_width = 0.5
 
     fig, ax = plt.subplots(1, 1, figsize=f_size)
 
@@ -86,12 +86,14 @@ def run(query, size, constraint):
     plt.yticks(fontsize=80, weight='bold')
 
     plt.xlabel(r'l\underline{ }receiptdate starting from \\10/01/1994, 4m interval',
-               fontsize=80, weight='bold').set_position((0.45, -0.1))
+               fontsize=80, weight='bold', labelpad=-5).set_position((0.44, -0.1))
 
-
-    # plt.legend(loc='upper right', bbox_to_anchor=(1.03, 1.05))
-    plt.legend(loc='upper right', bbox_to_anchor=(1.0, 0.7), fontsize=65)
     plt.tight_layout()
+    # plt.legend(loc='upper right', bbox_to_anchor=(1.03, 1.05))
+    plt.legend(loc='upper right', bbox_to_anchor=(1.0, 0.9), fontsize=65,
+               ncol=1, labelspacing=0.1, handletextpad=0.2, markerscale=0.3,
+               columnspacing=0.2, borderpad=0.2, frameon=True)
+
     fig_path = "query_selectivity_q" + str(query) + "_" + size + "_" + constraint + ".png"
 
     plt.savefig(fig_path, bbox_inches='tight')

@@ -22,7 +22,7 @@ label = ['PS-prov', "PS-search", "BL-prov", "BL-search"]
 plt.rc('text', usetex=True)
 plt.rc('font', size=70, weight='bold')
 
-f_size = (14, 10)
+f_size = (13, 8)
 
 x_list = list()
 x_naive = list()
@@ -58,13 +58,12 @@ def run(query, constraint):
         else:
             execution_timebl1.append(0)
             execution_timebl2.append(0)
-    # x_list = [19941230, 19950115, 19950130, 19950215, 19950230, 19950315, 19950330, 19950415]
-    x_list = [1, 7, 13, 19, 25, 31, 37, 43]
+    x_list = [25, 30, 35, 40, 45, 50, 55, 60]
 
     print(x_list, execution_timeps1, execution_timeps2)
 
     index = np.arange(len(execution_timeps1))
-    bar_width = 0.45
+    bar_width = 0.5
 
     fig, ax = plt.subplots(1, 1, figsize=f_size)
 
@@ -82,13 +81,16 @@ def run(query, constraint):
     #         color=color[3], label=label[3])
 
 
-    plt.xticks(np.arange(0, 8), x_list, rotation=0, fontsize=80)
-    plt.yticks(fontsize=80, weight='bold')
+    plt.xticks(np.arange(0, 8), x_list, rotation=0, fontsize=85)
+    plt.yticks(fontsize=85, weight='bold')
 
-    plt.xlabel(r'Hours worked per week', fontsize=80, weight='bold')
-    plt.legend(loc='upper right', bbox_to_anchor=(1, 0.65), fontsize=65)
+    plt.xlabel(r'Hours worked per week', fontsize=80, weight='bold', labelpad=-10).set_position((0.48, -0.15))
 
     plt.tight_layout()
+    plt.legend(loc='lower right', bbox_to_anchor=(1, -0.2), fontsize=60,
+               ncol=1, labelspacing=0.2, handletextpad=0.2, markerscale=0.3,
+               columnspacing=0.2, borderpad=0.2, frameon=True)
+
     fig_path = "query_selectivity_q" + str(query) + "_" + constraint + ".png"
 
     plt.savefig(fig_path, bbox_inches='tight')

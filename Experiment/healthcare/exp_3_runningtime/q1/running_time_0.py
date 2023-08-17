@@ -49,15 +49,15 @@ def compare(q, c, time_output):
     print(*minimal_refinements1, sep="\n")
 
     running_time2, provenance_time2, search_time2 = 0, 0, 0
-    # print("========================== lattice traversal ===================================")
-    #
-    # minimal_refinements2, minimal_added_refinements2, running_time2, provenance_time2, search_time2 = \
-    #     lt.FindMinimalRefinement(data_file_prefix, separator, query_file, constraint_file, data_file_format, time_limit)
-    # if running_time2 > time_limit:
-    #     print("naive alg out of time")
-    # else:
-    #     print("running time = {}".format(running_time2))
-    #     print(*minimal_refinements2, sep="\n")
+    print("========================== lattice traversal ===================================")
+
+    minimal_refinements2, minimal_added_refinements2, running_time2, provenance_time2, search_time2 = \
+        lt.FindMinimalRefinement(data_file_prefix, separator, query_file, constraint_file, data_file_format, time_limit)
+    if running_time2 > time_limit:
+        print("naive alg out of time")
+    else:
+        print("running time = {}".format(running_time2))
+        print(*minimal_refinements2, sep="\n")
 
     time_output.write("\n")
     idx = "Q" + str(q) + "C" + str(c)
@@ -89,8 +89,8 @@ def run(q, c):
 
 
 run(1, 1)
-run(1, 2)
-run(1, 3)
+# run(1, 2)
+# run(1, 3)
 # run(2, 1)
 # run(2, 2)
 # run(2, 3)

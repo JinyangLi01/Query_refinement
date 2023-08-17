@@ -19,7 +19,7 @@ plt.rc('font', size=70, weight='bold')
 color = ['C1', 'C0', 'C7', 'C6']
 label = ['PS-prov', "PS-search", "PS-prov\_no\_opt", "PS-search\_no\_opt"]
 
-f_size = (14, 12)
+f_size = (13, 11)
 
 x_list = list()
 x_naive = list()
@@ -71,18 +71,19 @@ plt.bar(index + bar_width, execution_timebl1, bar_width, color=color[3], label=l
 
 # x_list = ['\\boldmath$Q^A_1$\n\\boldmath$C^A_1$', '\\boldmath$Q^A_1$\n\\boldmath$C^A_2$',
 #           '\\boldmath$Q^A_2$\n\\boldmath$C^A_1$', '\\boldmath$Q^A_2$\n\\boldmath$C^A_2$']
-x_list = ['\\boldmath$Q^A_1$\\boldmath$C^A_1$', '\\boldmath$Q^A_1$\\boldmath$C^A_2$',
-          '\\boldmath$Q^A_2$\\boldmath$C^A_1$', '\\boldmath$Q^A_2$\\boldmath$C^A_2$']
+x_list = ['\\boldmath$Q^A_1$\n\\boldmath$C^A_1$', '\\boldmath$Q^A_1$\n\\boldmath$C^A_2$',
+          '\\boldmath$Q^A_2$\n\\boldmath$C^A_1$', '\\boldmath$Q^A_2$\n\\boldmath$C^A_2$']
 
 
-plt.xticks(np.arange(0, 4) + bar_width/2, x_list, rotation=0, fontsize=55)
-plt.yticks(fontsize=80, weight='bold')
+plt.xticks(np.arange(0, 4) + bar_width/2, x_list, rotation=0, fontsize=60)
+plt.yticks(fontsize=75, weight='bold')
 
-plt.xlabel('Query and Constraint', fontsize=80, weight='bold')
+plt.xlabel('Query and Constraint', fontsize=70, weight='bold').set_position((0.41, -0.1))
 
 # plt.yscale('log')
-lgnd = plt.legend(loc='upper right', bbox_to_anchor=(1.04, 0.9), fontsize=55, ncol=1, labelspacing=0.4,
-                  handletextpad=0.1, markerscale=0.5, columnspacing=0.5)
+lgnd = plt.legend(loc='upper right', bbox_to_anchor=(1.05, 1.3), fontsize=55,
+                  ncol=1, labelspacing=0.1,
+                  handletextpad=0.1, markerscale=0.4, columnspacing=0.5, frameon=False)
 
 plt.tight_layout()
 plt.savefig("ACSIncome_optimization_effect.png", bbox_inches='tight')

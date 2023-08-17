@@ -100,7 +100,7 @@ def run(q, c):
 
 
 run(1, 1)
-run(1, 2)
+# run(1, 2)
 # run(1, 3)
 # run(2, 1)
 # run(2, 2)

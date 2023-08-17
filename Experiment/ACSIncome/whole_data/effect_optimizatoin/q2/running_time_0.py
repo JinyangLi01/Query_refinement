@@ -43,7 +43,7 @@ def compare(q, c, time_output):
     constraint_file = constraint_file_prefix + str(c) + ".json"
 
     print("========================== provenance search ===================================")
-    minimal_refinements1, running_time1, _, \
+    minimal_refinements1, _, running_time1, _, \
     provenance_time1, search_time1 = \
         ps.FindMinimalRefinement(data_file_prefix, separator, query_file, constraint_file, data_file_format, time_limit)
 
@@ -95,5 +95,5 @@ def run(q, c):
     time_output.close()
 
 
-# run(2, "constraint_contract1")
-run(2, "constraint_relax1")
+run(3, "constraint_relax1")
+run(3, "constraint_contract1")
