@@ -86,8 +86,8 @@ def run(query, size, constraint):
     plt.yticks([1, 10, 100, 1000], [1, 10, 100, 1000], fontsize=80, weight='bold')
     plt.ylim(1)
 
-    plt.xlabel(r'o\underline{ }orderdate starting from \\08/28/1994, 2m interval',
-               fontsize=80, weight='bold', labelpad=-5).set_position((0.44, -0.1))
+    plt.xlabel(r'o\underline{ }orderdate starting from \\  08/28/1994, 2m interval',
+               fontsize=80, weight='bold', labelpad=-5).set_position((0.42, -0.1))
     plt.yscale('log')
     plt.tight_layout()
     plt.legend(loc='upper right', bbox_to_anchor=(1.04, 0.7), fontsize=60,
