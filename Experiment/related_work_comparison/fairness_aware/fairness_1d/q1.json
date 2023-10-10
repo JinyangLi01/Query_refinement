@@ -1,0 +1,10 @@
+{
+  "tables": ["texas_tribune_unique_x"],
+  "selection_numeric_attributes": {
+    "x": {
+        "greater": [">=", 5000, 1],
+        "smaller": ["<=", 25000, 1]
+    }
+  }
+}
+
