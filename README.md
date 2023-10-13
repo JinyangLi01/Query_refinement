@@ -22,3 +22,7 @@ run any .py file under folder Experiment
 
 ## Where to find the paper
 Our technical report can be found at FullPaper/Query_Refinement.pdf
+
+## Demo paper
+Demo paper is accepted by VLDB 2023: https://dl.acm.org/doi/abs/10.14778/3611540.3611623 
+Demo system: https://github.com/alons9911/Query_refinement
