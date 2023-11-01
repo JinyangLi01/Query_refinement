@@ -5,15 +5,14 @@ Diversity, group representation, and similar needs often apply to query results,
 
 
 ## Algorithms
-We have two algorithms: baseline and our algorithm.
-Both algorithms use provenance annotation to eliminate the need to access the database and re-execute the queries.
-They only have different searching strategies.
 
+- Baseline Algorithm (Baseline): This naive algorithm utilizes a provenance model to avoid multiple database accesses. However, it identifies minimal refinements by navigating through all potential refinements. Script can be found in Algorithm/LatticeTraversal_4_20220901.py.
+- PVL-based Search (PS): This is algorithm with all optimizations to identify minimal refinements with PVL. Script can be found in Algorithm/ProvenanceSearchValues_8_20230119.py
+- PVL-based Search without optimization (PS\_no\_opt): This version is our proposed approach but without the optimizations. Script can be found in Algorithm/ProvenanceSearchValues_8_no_optimization.py
 
-Baseline algorithm: traverse all possible refinements. Script can be found in Algorithm/LatticeTraversal_4_20220901.py
+## Datasets
 
-Our proposed algorithm: use provenance expressions and PVL to accelerate the searching. 
-Script can be found in Algorithm/ProvenanceSearchValues_8_20230119.py
+In folder InputData.
 
 
 ## How to run experiments
